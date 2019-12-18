@@ -1,0 +1,27 @@
+<h1>Demand Pricing</h1>
+
+<table>
+  <thead>
+    <th>S.No.</th>
+    <th>SKU</th>
+    <th>Product Family</th>
+    <th>Service Code</th>
+    <th>Transfer Type</th>
+    <th>From Location</th>
+  </thead>
+  <tbody>
+    <% count = 1 %>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= count %></td>
+        <td><%= product.sku %></td>
+        <td><%= product.productFamily %></td>
+        <td><%= product.servicecode %></td>
+        <td><%= product.transferType %></td>
+        <td><%= product.fromLocation %></td>
+      </tr>
+      <% count += 1 %>
+    <% end %>
+  </tbody>
+
+</table>
